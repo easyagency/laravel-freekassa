@@ -1,0 +1,44 @@
+{
+    "name": "easyagency/laravel-freekassa",
+    "description": "FreeKassa payments for Laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "easyagency",
+            "email": "support@easy-agency.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.3",
+        "laravel/framework": "8.*",
+        "guzzlehttp/guzzle": "7.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.3",
+        "orchestra/testbench": "6.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Easyagency\\FreeKassa\\Facades\\": "src/Facades",
+            "Easyagency\\FreeKassa\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Easyagency\\FreeKassa\\Test\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Easyagency\\FreeKassa\\FreeKassaServiceProvider"
+            ],
+            "aliases": {
+                "FreeKassa": "Easyagency\\FreeKassa\\Facades\\FreeKassa"
+            }
+        }
+    }
+}
